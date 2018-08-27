@@ -5,6 +5,8 @@ $(document).ready(function(){
         $(this).toggleClass('open');
     });
 
+    
+
     // Hiding header on scroll
     let prevScrollPos = window.pageYOffset;
     // Checking to see if screen width matches media query for desktop header
@@ -14,9 +16,9 @@ $(document).ready(function(){
          window.onscroll = function(){
             let currentScrollPos = window.pageYOffset;
             if (prevScrollPos > currentScrollPos){
-                document.getElementById("header_container").style.top = "0";
+                document.getElementById("header_outer").style.top = "0";
             } else{
-                document.getElementById("header_container").style.top = "-130px";
+                document.getElementById("header_outer").style.top = "-130px";
             }
         
             prevScrollPos = currentScrollPos;

@@ -1,27 +1,42 @@
-#header_container{
+#header_outer{
     position: fixed;
-    width: 70vw;
-    //max-width: 1000px;
+    width: 100vw;
+    background: $primary-white;
     height: 85px;
-    //display: block;
     top: 0;
     z-index: 100;
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
     transition: top 500ms;
+    .header_container{
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        height: 130px;
+        border-bottom: 1px solid #797979;
+        background: $primary-white;
+    }
+}
+.site_name{
+    position: relative;
+    top: 40px;
+    left: 40px;
+    width: 330px;
+    color: $primary-black;
+    font-weight: 300;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.site_profession{
+    position: relative;
+    top: 30px;
+    left: 40px;
+    font-weight: 100;
+    font-size: 0.7em;
 }
 
-.site_logo{
-    width: 60px;
-    height: 56px;
-    margin: 15px 0 0 15px;
-    padding: 0;
-    background-image: url(../images/LM_logo.png);
-    background-repeat: no-repeat;
-    background-size: 60px 56px;
-    background-position: center;
-}
 /* Nav MOBILE/TABLET */
 .nav_container{
     top: 0;
@@ -51,65 +66,61 @@
             font-size: 1.2em;
             transition: 350ms ease-in-out;
             text-decoration: none;
-            &:hover{
-                
-            }
+        }
+        .active_link{
+        color: $primary-color;
         }
     }
+    
 }
 
 /* Desktop Menu */
 @media (min-width: 800px){
-    #header_container{
+    #header_outer{
         box-sizing: border-box;
-        //background: $primary-grey;
+        width: 100vw;
         height: 130px;
-        border-bottom: 1px solid #797979;
-    }
-    .site_name{
-        position: relative;
-        top: 40px;
-        width: 330px;
-        //left: 150px;
-        font-weight: 200;
-        font-size: 1.6em;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-    .site_profession{
-        position: relative;
-        top: 30px;
-        //left: 150px;
-        font-weight: 100;
-        font-size: 0.7em;
-    }
-    .nav_container{
-        position: absolute;
-        height: 130px;
-        flex-direction: row;
-        margin: 0 auto;
-        width: auto;
-        right: 0px;
-        background: none;
-        li{
-            display: inline-block;
+        .site_name{
+            left: 0px;
+        }
+        .site_profession{
+            left: 0px;
+        }
+        .nav_container{
+            //background: #797979;
             position: relative;
             height: auto;
-            margin: auto 0 auto 1em;;
-            width: 100%;
-            //background: saddlebrown;
-            a{
-                display: block;
-                color: $primary-black;
-                font-size: 0.8em;
-                padding: 2px 0 0 0;
-                margin: auto;
-                letter-spacing: 0.1em;
+            flex-direction: row;
+            margin: 0 auto;
+            width: auto;
+            right: 0px;
+            background: none;
+            float: right;
+            li{
+                display: inline-block;
+                position: relative;
+                height: 100%;
+                margin: 0 0 0 0.8em;
+                width: auto;
+                //background: saddlebrown;
+                a{
+                    display: block;
+                    color: $primary-black;
+                    font-size: 0.8em;
+                    padding: 2px 0 0 0;
+                    margin: 0;
+                    letter-spacing: 0.1em;
+                    //background: salmon;
+                    height: 100%;
+                }
             }
+            .active_link{
+                color: $primary-color;
+                }
         }
-    }
-    #nav_icon{
-        display: none;
+        #nav_icon{
+            display: none;
+        }
     }
 }
 

@@ -1,0 +1,42 @@
+.home_hero_outer{
+    position: relative;
+    width: 100vw;
+    height: 780px;
+    background: $primary-white;
+    z-index: 0;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgb(255, 255, 255) 5%, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.3), rgba(244, 244, 244, 0));
+        z-index: 2;
+    }
+    .hero_bg{
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/hero_bg.png);
+        background-size: cover;
+        background-position: top 100px center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    .logo_container{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/lm_logo_2.png);
+    background-size: 150px 150px;
+    background-position: center;
+    z-index: 3;
+    }
+}

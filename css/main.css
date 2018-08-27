@@ -9,12 +9,14 @@ html, body {
   color: #121212;
   background: #f4f4f4;
   width: 100vw;
-  height: 1000px;
-  font-weight: 300; }
+  height: 2000px;
+  font-weight: 300;
+  z-index: 0; }
 
-#header_container {
+#header_outer {
   position: fixed;
-  width: 70vw;
+  width: 100vw;
+  background: #f4f4f4;
   height: 85px;
   top: 0;
   z-index: 100;
@@ -22,16 +24,31 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   transition: top 500ms; }
+  #header_outer .header_container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 130px;
+    border-bottom: 1px solid #797979;
+    background: #f4f4f4; }
 
-.site_logo {
-  width: 60px;
-  height: 56px;
-  margin: 15px 0 0 15px;
-  padding: 0;
-  background-image: url(../images/LM_logo.png);
-  background-repeat: no-repeat;
-  background-size: 60px 56px;
-  background-position: center; }
+.site_name {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  width: 330px;
+  color: #121212;
+  font-weight: 300;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+.site_profession {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  font-weight: 100;
+  font-size: 0.7em; }
 
 /* Nav MOBILE/TABLET */
 .nav_container {
@@ -62,49 +79,46 @@ html, body {
       font-size: 1.2em;
       transition: 350ms ease-in-out;
       text-decoration: none; }
+    .nav_container li .active_link {
+      color: #32d800; }
 
 /* Desktop Menu */
 @media (min-width: 800px) {
-  #header_container {
+  #header_outer {
     box-sizing: border-box;
-    height: 130px;
-    border-bottom: 1px solid #797979; }
-  .site_name {
-    position: relative;
-    top: 40px;
-    width: 330px;
-    font-weight: 200;
-    font-size: 1.6em;
-    text-transform: uppercase;
-    letter-spacing: 0.2em; }
-  .site_profession {
-    position: relative;
-    top: 30px;
-    font-weight: 100;
-    font-size: 0.7em; }
-  .nav_container {
-    position: absolute;
-    height: 130px;
-    flex-direction: row;
-    margin: 0 auto;
-    width: auto;
-    right: 0px;
-    background: none; }
-    .nav_container li {
-      display: inline-block;
+    width: 100vw;
+    height: 130px; }
+    #header_outer .site_name {
+      left: 0px; }
+    #header_outer .site_profession {
+      left: 0px; }
+    #header_outer .nav_container {
       position: relative;
       height: auto;
-      margin: auto 0 auto 1em;
-      width: 100%; }
-      .nav_container li a {
-        display: block;
-        color: #121212;
-        font-size: 0.8em;
-        padding: 2px 0 0 0;
-        margin: auto;
-        letter-spacing: 0.1em; }
-  #nav_icon {
-    display: none; } }
+      flex-direction: row;
+      margin: 0 auto;
+      width: auto;
+      right: 0px;
+      background: none;
+      float: right; }
+      #header_outer .nav_container li {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        margin: 0 0 0 0.8em;
+        width: auto; }
+        #header_outer .nav_container li a {
+          display: block;
+          color: #121212;
+          font-size: 0.8em;
+          padding: 2px 0 0 0;
+          margin: 0;
+          letter-spacing: 0.1em;
+          height: 100%; }
+      #header_outer .nav_container .active_link {
+        color: #32d800; }
+    #header_outer #nav_icon {
+      display: none; } }
 
 .nav_container--open {
   height: auto; }
@@ -216,6 +230,45 @@ html, body {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
   background: #121212; }
+
+.home_hero_outer {
+  position: relative;
+  width: 100vw;
+  height: 780px;
+  background: #f4f4f4;
+  z-index: 0; }
+  .home_hero_outer::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(white 5%, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.3), rgba(244, 244, 244, 0));
+    z-index: 2; }
+  .home_hero_outer .hero_bg {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/hero_bg.png);
+    background-size: cover;
+    background-position: top 100px center;
+    background-repeat: no-repeat;
+    z-index: 1; }
+  .home_hero_outer .logo_container {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/lm_logo_2.png);
+    background-size: 150px 150px;
+    background-position: center;
+    z-index: 3; }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
