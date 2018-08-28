@@ -80,9 +80,15 @@ html,body{
 .green_em{
     position: relative;
     color: $primary-color;
+    font-weight: 200;
     &::before{
         position: absolute;
         content: '';
-
+        width: 2px;
+        background: $primary-color;
+        height: 190px;
+        transform: rotate(90deg);
+        top: -77px;
+        left: 91px;
     }
 }

@@ -155,7 +155,9 @@
 .nav_container li::before,
 .nav_container li::after,
 .site_name::before,
-.site_name::after{
+.site_name::after,
+.email_link::before,
+.email_link::after{
     content: '';
     position: absolute;
     width: 0%;
@@ -166,12 +168,14 @@
   }
   
   .nav_container li::before,
-  .site_name::before {
+  .site_name::before,
+  .email_link::before {
     left: -2.5px;
     pointer-events: none;
   }
   .nav_container li::after,
-  .site_name::after {
+  .site_name::after
+  .email_link::after {
     right: 2.5px;
     background: $primary-color;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -179,7 +183,8 @@
   }
   
   .nav_container li:hover::before,
-  .site_name:hover::before{
+  .site_name:hover::before,
+  .email_link:hover::before{
     background: $primary-color;
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -187,7 +192,8 @@
   }
   
   .nav_container li:hover::after,
-  .site_name:hover::after{
+  .site_name:hover::after
+  .email_link:hover::after{
     background: transparent;
     width: 100%;
     transition: 0s;
