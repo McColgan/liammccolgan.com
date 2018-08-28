@@ -1,9 +1,10 @@
 .home_hero_outer{
     position: relative;
     width: 100vw;
-    height: 780px;
+    height: 100vh;
     background: $primary-white;
     z-index: 0;
+    overflow: hidden;
     &::before{
         position: absolute;
         content: '';
@@ -11,7 +12,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(rgb(255, 255, 255) 5%, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.3), rgba(244, 244, 244, 0));
+        background: linear-gradient(rgb(244, 244, 244) 0%, rgba(244, 244, 244, 1) 15%, rgba(244, 244, 244, 0.1), rgba(244, 244, 244, 0));
         z-index: 2;
     }
     .hero_bg{
@@ -21,11 +22,12 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: url(../images/hero_bg.png);
+        background-image: url(../images/balloons-bg-grey.png);
         background-size: cover;
-        background-position: top 100px center;
+        background-position: center;
         background-repeat: no-repeat;
         z-index: 1;
+        background-attachment: fixed;
     }
     .logo_container{
     position: absolute;
@@ -39,4 +41,54 @@
     background-position: center;
     z-index: 3;
     }
+}
+
+/* Balloons */
+
+.balloon1{
+    position: absolute;
+    width: 180px;
+    height: 229px;
+    background-image: url(../images/balloon1.png);
+    background-size: 180px 229px;
+    background-repeat: no-repeat;
+    left: 20%;
+    transform: translate(0px, 300px);
+    z-index: 3;
+}
+
+.balloon2{
+    position: absolute;
+    width: 167px;
+    height: 224px;
+    background-image: url(../images/balloon2.png);
+    background-size: 74px 101px;
+    background-repeat: no-repeat;
+    right: 15%;
+    transform: translate(0px, 250px);
+    z-index: 3;
+}
+.balloon3{
+    position: absolute;
+    width: 107px;
+    height: 135px;
+    background-image: url(../images/balloon3.png);
+    background-size: 50px 63px;
+    background-repeat: no-repeat;
+    right: 25%;
+    //top: 20px;
+    transform: translate(0px, 200px);
+    z-index: 3;
+}
+.balloon4{
+    position: absolute;
+    width: 78px;
+    height: 95px;
+    background-image: url(../images/balloon4.png);
+    background-size: 35px 43px;
+    background-repeat: no-repeat;
+    right: 40%;
+    //top: 55%;
+    transform: translate(0px, 450px);
+    z-index: 3;
 }

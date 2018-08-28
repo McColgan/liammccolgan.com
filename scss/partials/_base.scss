@@ -5,10 +5,84 @@ html,body{
     color: $primary-black;
     background: $primary-white;
     width: 100vw;
-    height: 2000px;
+    height: auto;
     font-weight: 300;
     z-index: 0;
 }
 
+/* Github icon */
+.github_logo,
+.github_logo::before,
+.github_logo::after{
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/github_black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    transition: 300ms;
+}
+.github_logo:hover{
+    background-image: url(../images/github_green.png);
+}
 
 
+/* Twitter icon */
+.twitter_logo,
+.twitter_logo::before,
+.twitter_logo::after{
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/twitter_black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    transition: 300ms;
+}
+.twitter_logo:hover{
+    background-image: url(../images/twitter_green.png);
+}
+
+/* instagram icon */
+.instagram_logo,
+.instagram_logo::before,
+.instagram_logo::after{
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/instagram_black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    transition: 300ms;
+}
+.instagram_logo:hover{
+    background-image: url(../images/instagram_green.png);
+}
+
+/* Linkedin icon */
+.linkedin_logo,
+.linkedin_logo::before,
+.linkedin_logo::after{
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/linkedin_black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    transition: 300ms;
+}
+.linkedin_logo:hover{
+    background-image: url(../images/linkedin_green.png);
+}
+
+/* Green emphasis span */
+
+.green_em{
+    position: relative;
+    color: $primary-color;
+    &::before{
+        position: absolute;
+        content: '';
+
+    }
+}
