@@ -8,7 +8,7 @@
     padding-top: 3em;
     z-index: 1;
     .footer_container{
-        width: 100%;
+        width: 90%;
         max-width: 1000px;
         //background: saddlebrown;
         height: 100%;
@@ -40,6 +40,15 @@
             justify-content: space-between;
             margin: 0;
             width: 130px;
+        }
+    }
+}
+/* Media Queries */
+@media (max-width: 720px){
+    .footer_outer{
+        .footer_container{
+            flex-direction: column;
+            padding: 2em 0;
         }
     }
 }

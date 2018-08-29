@@ -343,7 +343,7 @@ html, body {
   padding-top: 3em;
   z-index: 1; }
   .footer_outer .footer_container {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     height: 100%;
     margin: 0 auto;
@@ -370,6 +370,12 @@ html, body {
       justify-content: space-between;
       margin: 0;
       width: 130px; }
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .footer_outer .footer_container {
+    flex-direction: column;
+    padding: 2em 0; } }
 
 .home_hero_outer {
   position: relative;
