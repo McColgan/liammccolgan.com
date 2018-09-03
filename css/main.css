@@ -528,7 +528,7 @@ html, body {
   .about_container .about_box:nth-child(2) {
     border-left: 1px solid #32d800;
     padding-left: 2em;
-    transition-delay: 800ms; }
+    transition-delay: 500ms; }
   .about_container .about_box:nth-child(1) {
     border-bottom: 2px solid #32d800;
     padding-bottom: 1em; }
@@ -645,6 +645,14 @@ html, body {
       .home_contact_outer .home_contact_container .contact_cta:hover {
         color: #32d800;
         border: 1px solid #32d800; }
+
+@media (max-width: 790px) {
+  .home_contact_outer {
+    height: 450px; }
+    .home_contact_outer .home_contact_container h1 {
+      font-size: 2.5em; }
+    .home_contact_outer .home_contact_container p {
+      padding: 0 7%; } }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document

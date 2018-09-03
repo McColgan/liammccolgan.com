@@ -38,7 +38,7 @@ $(document).ready(function(){
         }
 
         // About fade ins 
-        if(wScroll > $('.about_outer').offset().top - ($(window).height() / 1.5)){
+        if(wScroll > $('.about_outer').offset().top - ($(window).height() / 1.2)){
             $('.about_h1_container h1').addClass('is-showing');     
         }
         if(wScroll > $('.about_container').offset().top - ($(window).height() / 1.5)){
