@@ -47,6 +47,55 @@
             </div> 
         </header>
         
+        <div class="contact_header_container">
+            <h1 class="contact_h1">Let's connect and have a chat.</h1>
+            <div class="up_arrow"></div>
+        </div>
+
+        <!-- FORM -->
+        <div class="form_container">
+            <table>
+                <form name="contactform" method="post" action="send_form_email.php">
+                    <tr>
+                        <td valign="top">
+                            <label for="name">Name.</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="first_name" maxlength="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email.</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="email" maxlength="80">
+                        </td>
+                    <tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="comments">Comments.</label>
+                        </td>
+                        <td valign="top">
+                            <textarea  name="comments" maxlength="1000" cols="25" rows="8"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="submit-btn">
+                                <input class="input-a" type="submit" value="Submit"><a href="http://www.freecontactform.com/email_form.php"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+
+        <!-- GOOGLE MAPS API -->
+        <div class="map_container">
+            <div id="map"></div>
+        </div>
+
         <!-- FOOTER -->
         <footer class="footer_outer">
             <div class="footer_container">
@@ -60,6 +109,131 @@
                 <a href="mailto:connect@liammccolgan.com" class="email_link">connect@liammccolgan.com</a>
             </div>
         </footer>
+
+
         <script type="text/javascript" src="js/main.js" async></script>
+        <script>
+            function initMap(){
+                // Map options //
+                var options = {
+                    zoom:8 ,
+                    center:{lat:52.57364,lng:-0.24777},
+                    styles: [
+                        {elementType: 'geometry', stylers: [{color: '#121212'}]},
+                        {elementType: 'labels.text.stroke', stylers: [{color: '32d800'}]},
+                        {elementType: 'labels.text.fill', stylers: [{color: '#32d800'}]},
+                        {
+                        featureType: 'administrative.locality',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#32d800'}]
+                        },
+                        {
+                        featureType: 'poi',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'geometry',
+                        stylers: [{color: '#6d6d6d'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#6b9a76'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [{color: '#38414e'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#32d800'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#9ca5b3'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{color: '#196d00'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#1f2835'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#f3d19c'}]
+                        },
+                        {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{color: '#2f3948'}]
+                        },
+                        {
+                        featureType: 'transit.station',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{color: '#cccccc'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#515c6d'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{color: '#17263c'}]
+                        },
+                    ],
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    scaleControl: true,
+                    streetViewControl: true,
+                    streetViewControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    
+                }
+                // New map //
+                var map = new google.maps.Map(document.getElementById('map'), options);
+                
+                // Add marker //
+                var marker = new google.maps.Marker({
+                    position:{lat:52.57364,lng:-0.24777},
+                    map:map
+                });
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content:'<h1>Oh, Hello!</h1>'
+                });
+
+                marker.addListener('click', function(){
+                    infoWindow.open(map, marker);
+                });
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1M2-K35n6bwm1JoCM7YHdb-dnRoRfhg&callback=initMap">
+        </script>
     </body>
 </html>
