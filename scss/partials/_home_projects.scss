@@ -55,10 +55,6 @@
         padding: 0;
         overflow: hidden;
         background: $primary-black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         .project_example_img{
             position: absolute;
             background-position: top center;
@@ -80,10 +76,10 @@
                 background: rgba(34, 34, 34, 0.5);
                 //z-index: -1;
              }
-            &:hover{
-                transform: scale(1.05);
-                opacity: 0.1;
-            }
+            // &:hover{
+            //     transform: scale(1.05);
+            //     opacity: 0.1;
+            // }
         }
         .yoga_bg{
             background-image: url(../images/yoga_bg.png);
@@ -94,27 +90,69 @@
         .rhcp_bg{
             background-image: url(../images/rhcp_bg.png);
         }
-        p{
-            font-size: 0.8em;
-            margin: 0;
-            //z-index: 1;
-            font-weight: 200;
-        }
-        h2{
-            //z-index: 1;
-            font-weight: 300;
-            margin: 0.1em 0 2em 0;
-        }
-        .project_cta{
+        .project_box_figure{
+            width: 100%;
+            height: 100%;
+            position: relative;
             z-index: 1;
-            color: $primary-color;
-            font-size: 1em;
+            text-align: center;
             //background: salmon;
-            border: 1px solid $primary-color;
-            padding: 1em 2em;
-            text-decoration: none;
-            cursor: pointer;
-            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 300ms ease-in-out;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.6);
+            .figure_info{
+                position: relative;
+                p{
+                    font-size: 0.8em;
+                    font-weight: 200;
+                    transition: 300ms ease-in-out;
+                    transform: translateY(-5px);
+                }
+                h2{
+                    margin: 0;
+                    font-weight: 300;
+                    transition: 300ms ease-in-out;
+                    transform: translateY(2px);
+                }
+            }
+            .project_cta{
+                margin-top: 1em;
+                bottom: 3em;
+                z-index: 1;
+                color: $primary-color;
+                font-size: 1em;
+                //background: salmon;
+                border: 1px solid $primary-color;
+                padding: 1em 2em;
+                text-decoration: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: 300ms ease-in-out;
+                transform: translateY(10px);
+                &:hover{
+                    color: $primary-white;
+                    border-color: $primary-white;
+                }
+            }
+            &:hover{
+                p{
+                    transform: translateY(0px);
+                }
+                h2{
+                    transform: translateY(0px);
+                }
+                .project_cta{
+                    transform: translateY(0px);
+                }
+                opacity: 1;
+            }
         }
+        
     }
 }
