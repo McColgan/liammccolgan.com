@@ -23,6 +23,7 @@
             transform: translateY(-50px);
             transition: 1000ms ease-in-out;
             opacity: 0;
+            font-family: 'IBM Plex Mono',sans-serif;
             &.is-showing{
                 opacity: 1;
                 transform: translateY(0px);
@@ -81,11 +82,12 @@
             position: relative;
             color: $primary-color;
             font-weight: 500;
+            font-family: 'IBM Plex Mono',sans-serif;
             &::before{
                 content: '';
                 position: absolute;
                 height: 4px;
-                width: 64px;
+                width: 76px;
                 bottom: 0.43em;
                 left: -0.1em;
                 background: $primary-color;
