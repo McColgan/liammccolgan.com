@@ -10,7 +10,6 @@
         width: 100%;
         height: auto;
         background: $primary-white;
-        
         h1{
             margin: 0 auto;
             max-width: 800px;
@@ -87,9 +86,9 @@
                 content: '';
                 position: absolute;
                 height: 4px;
-                width: 76px;
+                width: 135px;
                 bottom: 0.43em;
-                left: -0.1em;
+                left: -0.13em;
                 background: $primary-color;
             }
         }

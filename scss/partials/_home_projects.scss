@@ -21,7 +21,6 @@
         font-size: 0.9em;
         text-align: center;
         width: 255px;
-        //background: salmon;
         padding: 1.15em 0;
         border: 2px solid $primary-black;
         margin: 2.5em auto;
@@ -31,7 +30,6 @@
         &:hover{
             color: $primary-color;
             border-color: $primary-color;
-            //background: $primary-grey;
             .arrow_icon{
                 background-image: url(../images/arrow_icon_green.png);
             }
