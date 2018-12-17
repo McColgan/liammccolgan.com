@@ -1,4 +1,4 @@
-.about_outer{
+.home_about_outer{
     position: relative;
     width: 100vw;
     height: auto;
@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     z-index: 0;
-    .about_h1_container{
+    .home_about_h1_container{
         width: 100%;
         height: auto;
         background: $primary-white;
@@ -32,7 +32,7 @@
 }
 
 /* About container */
-.about_container{
+.home_about_container{
     width: 100%;
     max-width: 1100px;
     height: auto;
@@ -43,18 +43,18 @@
     justify-content: space-evenly;
     align-items: center;
     //background: $primary-grey;
-    .about_box:nth-child(2){
+    .home_about_box:nth-child(2){
         border-left: 1px solid $primary-color;
         padding-left: 2em;
         transition-delay: 500ms;
     }
-    .about_box:nth-child(1){
+    .home_about_box:nth-child(1){
         border-bottom: 2px solid $primary-color;
         padding-bottom: 1em;
         
     }
 
-    .about_box{
+    .home_about_box{
         width: 40%;
         height: 100%;
         //background: salmon;
@@ -106,16 +106,16 @@
 
 /* Media Queries */
 @media (max-width: 700px){
-    .about_outer{
-        .about_h1_container{
+    .home_about_outer{
+        .home_about_h1_container{
             h1{
                 font-size: 1em;
             }
         }
     }
-    .about_container{
+    .home_about_container{
         flex-direction: column;
-        .about_box{
+        .home_about_box{
             width: 70%;
             margin: 2em 1em;
             .profile_img{

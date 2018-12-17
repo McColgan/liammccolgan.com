@@ -8,13 +8,13 @@ $(document).ready(function(){
     
 
     // Hiding header on scroll
-    let prevScrollPos = window.pageYOffset;
+    var prevScrollPos = window.pageYOffset;
     // Checking to see if screen width matches media query for desktop header
-    let screenWidth = window.matchMedia( "(min-width: 800px)" );
+    var screenWidth = window.matchMedia( "(min-width: 800px)" );
     
     if (screenWidth.matches){
          window.onscroll = function(){
-            let currentScrollPos = window.pageYOffset;
+            var currentScrollPos = window.pageYOffset;
             if (prevScrollPos > currentScrollPos){
                 document.getElementById("header_outer").style.top = "0";
             } else{
@@ -22,7 +22,7 @@ $(document).ready(function(){
             }
         
             prevScrollPos = currentScrollPos;
-            }
+            };
         }
 
     
