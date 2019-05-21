@@ -110,6 +110,7 @@
             padding: 0.75em 0;
             &:hover{
                 border-color: $primary-color;
+                background: $primary-black;
                 .arrow_icon{
                     background-image: url(../images/arrow_icon_green.png);
                 }
